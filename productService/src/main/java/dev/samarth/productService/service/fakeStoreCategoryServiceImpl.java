@@ -8,8 +8,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+import dev.samarth.productService.clients.fakeStoreProductDTO;
 import dev.samarth.productService.dto.fakeStoreCategoryDTO;
-import dev.samarth.productService.dto.fakeStoreProductDTO;
 import dev.samarth.productService.models.Category;
 import dev.samarth.productService.models.Product;
 @Service

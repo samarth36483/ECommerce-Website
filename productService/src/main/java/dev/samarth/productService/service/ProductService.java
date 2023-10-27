@@ -1,13 +1,14 @@
 package dev.samarth.productService.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import dev.samarth.productService.dto.ProductDTO;
 import dev.samarth.productService.models.Product;
 
 public interface ProductService {
 	
-	Product getSingleProduct(Long product_id);
+	Optional<Product> getSingleProduct(Long product_id);
 	
 	List<Product> getAllProducts();
 	
