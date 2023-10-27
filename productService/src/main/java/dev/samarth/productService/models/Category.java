@@ -2,9 +2,13 @@ package dev.samarth.productService.models;
 
 import java.util.List;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.OneToMany;
+@Entity
 public class Category extends BaseModel {
 	private String name;
 	private String description;
+	@OneToMany(mappedBy = "category")
 	private List<Product> products;
 	
 	public String getName() {

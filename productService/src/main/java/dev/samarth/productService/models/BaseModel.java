@@ -2,6 +2,9 @@ package dev.samarth.productService.models;
 
 import java.sql.Date;
 
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import jakarta.persistence.MappedSuperclass;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.NoArgsConstructor;
@@ -9,8 +12,10 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@MappedSuperclass
 public class BaseModel {
-	
+	@Id
+	@GeneratedValue
 	private Long id;
 	private Date createdAt;
 	private Date lastUpdatedAt;
