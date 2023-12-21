@@ -8,7 +8,7 @@ import jakarta.persistence.OneToMany;
 public class Category extends BaseModel {
 	private String name;
 	private String description;
-	@OneToMany(mappedBy = "category")
+	@OneToMany(mappedBy = "category")  // "mapped by" to prevent a relation from being represented twice
 	private List<Product> products;
 	
 	public String getName() {

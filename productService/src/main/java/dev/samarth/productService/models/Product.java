@@ -1,5 +1,7 @@
 package dev.samarth.productService.models;
 
+
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.ManyToOne;
 
@@ -7,7 +9,8 @@ import jakarta.persistence.ManyToOne;
 public class Product extends BaseModel {
 	private String title;
 	private double price;
-	@ManyToOne
+	//@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne(cascade = CascadeType.REMOVE)
 	private Category category;
 	private String description;
 	private String imageURL;
